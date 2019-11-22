@@ -1,20 +1,21 @@
-function add(n1:number,n2:number,showResult:boolean,phrase:string)
+combine(30,26);
+
+console.log("hello");
+
+function combine(n1:number | string,n2:number|string,resultString)
 {
-    const res=n1+n2;
-    if(showResult)
+    let result;
+
+    if(typeof n1 =="number" && typeof n2=="number")
     {
-        console.log(phrase + res);
-        
+        result=n1+n2;
     }
-    else
-    return n1+n2 ;
-   
+   else
+   result=n1.toString()+n2.toString();
+  
+  console.log(result); 
 }
 
 
-const number1=5;
-const number2=7.66;
-const viewResult=true;
-const phrase= "The Result is:";
 
-add(number1,number2,viewResult,phrase);
+
