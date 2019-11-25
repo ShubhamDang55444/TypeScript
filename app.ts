@@ -1,31 +1,18 @@
-
-
-//  let resultString: string
-type Combine_stringAnd_number = number |string;
-const combinedAges=combine(30,25,"as-number");
-console.log(combinedAges);
-
-
-const combinedNames=combine('4',"4","as-text");
-console.log(combinedNames);
-
-function combine(n1:Combine_stringAnd_number, n2:Combine_stringAnd_number,resultString: "as-number" | "as-text")
+function Add(n1:number,n2:number)
 {
-    let result;
-
-    if(typeof n1 === 'number' && typeof n2=== "number"|| resultString==="as-number")
-    {
-        result= +n1 + +n2;
-    }
-   else
-   result=n1.toString()+n2.toString();
-  
-  return result;
+    return n1+n2;
 }
 
+function PrintResult(num:number):void
+{
+    console.log('Result:' + num)
+}
 
-//let res= combine(30,26,"as-text");
-//console.log(res);
-type User={name:string} | string;
-let u1:User={name:'MAX'};
-u1='MIC'; 
+let combinedAges: (name1:number,name2:number) => number;
+combinedAges=Add;
+//combinedAges=PrintResult;
+
+
+//let result= combinedAges(4,4);
+
+//console.log(result);
