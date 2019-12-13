@@ -27,7 +27,11 @@ function AddUsingRP() {
     for (var _i = 0; _i < arguments.length; _i++) {
         numbers[_i] = arguments[_i];
     }
+    return numbers.reduce(function Aa(curRes, curValue) {
+        return curRes + curValue;
+    }, 0);
 }
+;
 var AddedNos = AddUsingRP(3, 5, 4, 5, 3);
 console.log(AddedNos);
 //# sourceMappingURL=app.js.map

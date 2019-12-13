@@ -26,8 +26,24 @@ const Person={
 
 const copiedPerson = {...Person}
 
+// function AddUsingRP(...numbers:number[])
+// {
+    
+//     return numbers.reduce((curRes,curValue)=>{
+//         return curRes+curValue;
+//    },0)
+    
+// };
+
 function AddUsingRP(...numbers:number[])
-{}
+{
+    
+    return numbers.reduce(function Aa(curRes,curValue){
+        return curRes+curValue;
+   },0)
+    
+};
+
 
 
 
