@@ -1,13 +1,25 @@
 class Department
 {
     name:string
-
     constructor(_name:string)
     {
         this.name=_name;
     }
+
+    describe(this:Department)
+    {
+        console.log("Dept:" + this.name);
+    }
 }
 
-const dept= new Department('sd');
+const depName= new Department("SD")
+depName.describe();
 
-console.log(dept);
+
+const copyOfDept=
+{
+   name:'s', describe:depName.describe
+};
+
+copyOfDept.describe();
+//console.log(depName);

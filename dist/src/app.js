@@ -1,9 +1,17 @@
 "use strict";
-var Addd = function (num1, num2) { return num1 + num2; };
-var Print = function (output) { return console.log(output); };
-console.log(Addd(5, 5));
-var myHobbies = ['a', 'b'];
-var myActiveHobbies = ['c'];
-myActiveHobbies.push.apply(myActiveHobbies, myHobbies);
-console.log(myActiveHobbies);
+var Department = (function () {
+    function Department(_name) {
+        this.name = _name;
+    }
+    Department.prototype.describe = function () {
+        console.log("Dept:" + this.name);
+    };
+    return Department;
+}());
+var depName = new Department("SD");
+depName.describe();
+var copyOfDept = {
+    name: 's', describe: depName.describe
+};
+copyOfDept.describe();
 //# sourceMappingURL=app.js.map
