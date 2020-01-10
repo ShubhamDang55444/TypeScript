@@ -1,25 +1,71 @@
 class Department
 {
-    name:string
-    constructor(_name:string)
+    private readonly id:number
+    private  name:string
+    private employees:string[]=[];
+    constructor(_id:number,_name:string)
     {
+        this.id=_id;
         this.name=_name;
+        
     }
 
     describe(this:Department)
     {
-        console.log("Dept:" + this.name);
+        console.log(`Dept (${this.id}): ${this.name}`);
     }
+
+    addEmployee(employee:string)
+    {
+        this.employees.push(employee);
+    }
+
+    printEmployeeInfo()
+    {
+        //console.log(this.employees.length);
+        console.log(this.employees);
+    }
+
+
 }
 
-const depName= new Department("SD")
-depName.describe();
-
-
-const copyOfDept=
+class ITDept extends Department
 {
-   name:'s', describe:depName.describe
-};
+    admins: string[];
+    constructor(_admins:string[])
+    {
+        super(2,"IT");
+        this.admins=_admins;
+        
+    }
+    
+}
 
-copyOfDept.describe();
+class AccountDpt extends Department
+{
+    constructor()
+    {
+        super(1,"Accounts")
+    }
+}
+const itDept= new ITDept(["MAX"]);
+//itDept.describe();
+//itDept.printEmployeeInfo();
+const accounting= new AccountDpt();
+
+
+itDept.addEmployee("Dang")
+itDept.addEmployee("XYZ")
+itDept.describe();
+itDept.printEmployeeInfo();
+console.log(itDept);
+console.log(accounting);
+
+
+// const copyOfDept=
+// {
+//    name:'s', describe:accounting.describe
+// };
+
+//copyOfDept.describe();
 //console.log(depName);
