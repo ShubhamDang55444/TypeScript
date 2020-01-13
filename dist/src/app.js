@@ -40,13 +40,24 @@ var ITDept = (function (_super) {
 }(Department));
 var AccountDpt = (function (_super) {
     __extends(AccountDpt, _super);
-    function AccountDpt() {
-        return _super.call(this, 1, "Accounts") || this;
+    function AccountDpt(id, _reports) {
+        var _this = _super.call(this, 5, "Accounts") || this;
+        _this.reports = [];
+        _this.reports = _reports;
+        return _this;
     }
+    AccountDpt.prototype.addReport = function (text) {
+        this.reports.push(text);
+    };
+    AccountDpt.prototype.printReports = function () {
+        console.log(this.reports);
+    };
     return AccountDpt;
 }(Department));
 var itDept = new ITDept(["MAX"]);
-var accounting = new AccountDpt();
+var accounting = new AccountDpt('d1', []);
+accounting.addReport('Something went wrong...');
+accounting.printReports();
 itDept.addEmployee("Dang");
 itDept.addEmployee("XYZ");
 itDept.describe();

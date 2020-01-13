@@ -43,16 +43,33 @@ class ITDept extends Department
 
 class AccountDpt extends Department
 {
-    constructor()
+    //private readonly id:string;
+    //private lastReport:string; 
+    private reports:string[]=[];
+    constructor(id:string,_reports:string[])
     {
-        super(1,"Accounts")
+        super(5,"Accounts")
+      
+        // this.lastReport=_reports[0]
+        this.reports=_reports;
+        //this.id=_id;
     }
+
+    addReport(text:string)
+    {
+        this.reports.push(text);
+      //  this.lastReport=text;
+    }
+    printReports() {
+        console.log(this.reports);
+      }
 }
 const itDept= new ITDept(["MAX"]);
 //itDept.describe();
 //itDept.printEmployeeInfo();
-const accounting= new AccountDpt();
-
+const accounting= new AccountDpt('d1',[]);
+accounting.addReport('Something went wrong...');
+accounting.printReports();
 
 itDept.addEmployee("Dang")
 itDept.addEmployee("XYZ")
