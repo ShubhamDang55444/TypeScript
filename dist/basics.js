@@ -11,5 +11,5 @@ var number1 = 5;
 var number2 = 7.66;
 var viewResult = true;
 var phrase = "The Result is:";
-add(number1, number2, viewResult, phrase);sdasdazd
+add(number1, number2, viewResult, phrase);
 //# sourceMappingURL=basics.js.map
