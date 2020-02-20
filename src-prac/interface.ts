@@ -1,4 +1,21 @@
 //console.log("HI");
+
+function AddFunction  (n1:number,n2:number):number
+{
+    return n1+n2;
+}
+
+//type AddFunction2 = (n1:number,n2:number)=>number;
+ let add_main:AddFunction2;
+
+ add_main= (n1:number,n2:number):number=> n1+n2;
+
+ interface AddFunction2
+ {
+     (n1:number,n2:number):number;
+ }
+
+
 interface Greetable
 {
     name: string;
@@ -7,7 +24,7 @@ interface Greetable
 }
 let user1:Greetable;
 
-class Person implements Greetable
+class Person_main implements Greetable
 {
     name: string;     
     constructor(_name:string)
@@ -19,7 +36,7 @@ class Person implements Greetable
        console.log("Hi I am", phrase);
     }    
 }
-user1= new Person("Dang");
+user1= new Person_main("Dang");
 console.log(user1);
 
  
