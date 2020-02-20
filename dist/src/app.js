@@ -1,14 +1,9 @@
 "use strict";
-var user1;
-var Person = (function () {
-    function Person(_name) {
-        this.name = _name;
-    }
-    Person.prototype.greet = function (phrase) {
-        console.log("Hi I am", phrase);
-    };
-    return Person;
-}());
-user1 = new Person("Dang");
-console.log(user1);
+console.log("Hello");
+var e1 = {
+    name: "DANG",
+    priveleges: "server",
+    date: new Date()
+};
+console.log(e1);
 //# sourceMappingURL=app.js.map
