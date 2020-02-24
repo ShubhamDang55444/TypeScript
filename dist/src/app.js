@@ -1,9 +1,3 @@
 "use strict";
-console.log("Hello");
-var e1 = {
-    name: "DANG",
-    priveleges: "server",
-    date: new Date()
-};
-console.log(e1);
+console.log("Heello");
 //# sourceMappingURL=app.js.map
