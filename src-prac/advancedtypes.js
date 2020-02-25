@@ -7,12 +7,15 @@ var e1 = {
 };
 console.log(e1);
 function Add(a, b) {
+    return a + b;
+}
+function Add(a, b) {
     if (typeof (a) == 'string' || typeof (b) == 'string') {
         return a.toString() + b.toString();
     }
     return a + b;
 }
-console.log(Add(2, 3));
+var result = Add('a', 'b');
 console.log(Add('sand', 4));
 console.log(Add('s', 'q'));
 function PrintEmployeeInfo(emp) {

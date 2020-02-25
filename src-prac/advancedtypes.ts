@@ -25,19 +25,25 @@ console.log(e1)
 
 type Combinable = string | number;
 
-function Add(a:number,b:number):number //function overload
-function Add(a:string,b:number):string //function overload
-function Add(a:string,b:string):string //function overload
-function Add(a:Combinable,b:Combinable)
+function Add(a:number,b:number):number{
+return a+b;
+}
+function Add(a:string,b:string):string
+
+function Add(a:Combinable,b:Combinable) 
 {
          if(typeof(a)== 'string' || typeof(b)== 'string')
          {
-             return a.toString()+ b.toString();
-         }
-         return a+b;
-}
+              return a.toString()+ b.toString();
+          }
+        return a+b;
+        }    
 
-console.log(Add(2,3));
+ var result= Add('a','b');
+ 
+// let a:null = null;
+ 
+
 console.log(Add('sand',4));
 console.log(Add('s','q')); 
 
